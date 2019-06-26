@@ -1,0 +1,60 @@
+#This is an example of an input file. Blocks are seperated with ONE blank line.
+#DO NOT put a blank line beetween a block comment and its content
+#Write lines in specified syntax provided.
+#Write a new set of attributes for the same test in ANOTHER LINE (hit Enter)
+#if there is a name with spaces in it, just put it in quotes (" ")
+#if there is nothing to be checked under a test, just write a 'skip' keyword in the first line
+#                    #1 Check if given column has numeric values
+#                    skip
+#
+#                    #2 Check if ...
+#First non-commented line (right under) is a connection string to a proper environment
+jdbc:compositesw
+
+#0 test_numeric - check if given column has numeric values
+#Syntax: view, column_1, column2, (...), column_n
+IMEA_TEST_SAMPLE, VOL_SU
+
+#1 test_non_empty - check if column is filled and there are no NULL values
+#Syntax: view, column_1, column2, (...), column_n
+IMEA_TEST_SAMPLE, BRAND_FORM
+
+#2 test_numeric_non_empty - check if column is filled with non empty numeric values
+#Syntax: view, column_1, column2, (...), column_n
+IMEA_TEST_SAMPLE, BRAND_FORM_ID
+
+#3 test_date - check if column is filled with date format data
+#Syntax: view, column_1, column2, (...), column_n
+IMEA_TEST_SAMPLE, MONTH
+
+#4 test_fiscal_year_format - check if column is filled with FY format data (FXXXX where XXXX are two numbers like 1617, 1718)
+#Syntax: view, column_1, column2, (...), column_n
+IMEA_TEST_SAMPLE, FY_ID
+
+#5 test_FX_rate - check if LC column is not NULL and different than 0 then converted column should also be NOT NULL and different than 0
+#Syntax: view, column_1, column_2
+IMEA_TEST_SAMPLE, GIV_LC, GIV_RUSD
+
+#6 test_TDC - check if X column is not NULL then Y (e.g. converted column) should also be NOT NULL
+#Syntax: view, column_1, column_2
+IMEA_TEST_SAMPLE, VOL_SU, TDC_LC
+
+#7 test_duplicates - check if combination of given columns is unique across table (duplicates)
+#Syntax: view, column_1, column_2, (...), column_n
+IMEA_TEST_SAMPLE, CUSTOMER_GROUP, MONTH, BRAND_FORM, GEO_ID
+
+#8 test_geo_id - check if column is filled with three digit number
+#Syntax: view, column_1, column2, (...), column_n
+IMEA_TEST_SAMPLE, GEO_ID
+
+#9 test_expected_value - check if column contains unique, expected value (one per input line)
+#Syntax: view,  column_1, column2, (...), column_n,  'expected_value'
+TST_eur_rep_fbnl_bel_output, SMO, 'FBNL'
+
+#10 test_expected_column_values - check if distinctive list is the same in two columns [ note the quotes! ('') ]
+#Syntax: view1, column_name1, , column_key_name, 'column_key', view2, column_name2, column_key_name2, 'column_key2'
+TST_eur_rep_fbnl_bel_output, "Customer Level 4", "Geo ID", '918', TST_eur_rep_customer_map, RPTNG_CUST_L4_NAME, GEO_ID, '918'
+
+#11 test_FY_time_scope - check if all scope of months exist in the output
+#Syntax: view, column_1, last_closed_month, py_flag, cy_flag
+CZECH_TEST_SAMPLE, Month, '2018-12-05', 1, 0

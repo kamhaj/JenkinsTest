@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# JDBC driver
+csjdbc.jar
+
+# HTML test report (just in case)
+index.html
