@@ -98,3 +98,12 @@ pytest.main([str(sys.argv[6]), "-v", "--junitxml=report.xml", "--html=index.html
 
 #running pytest directly from python, first argument given in terminal (yaml file) is a test script file name
 #pytest.main([str(sys.argv[6]), "-v", "--junitxml=report.xml"])
+
+print("trying to print variables")
+print(sys.argv[0])
+print(sys.argv[1])
+print(sys.argv[2])
+print(sys.argv[3])
+print(sys.argv[4])
+print(sys.argv[5])
+print(sys.argv[6])
