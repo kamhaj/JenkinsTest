@@ -331,340 +331,232 @@ div.image img {
 	border-top: 8px solid #999;
 }
 
-/******************************
- * CUSTOM CSS
- * assets\style.css
- ******************************/
-
-body {
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 12px;
-	min-width: 1200px;
-	color: #999;
-}
-
-h1 {
-	font-size: 24px;
-	color: black;
-}
-
-h2 {
-	font-size: 16px;
-	color: black;
-}
-
-p {
-    color: black;
-}
-
-a {
-	color: #999;
-}
-
-table {
-	border-collapse: collapse;
-}
+/*===============================================================================================================================================*/
 
 /******************************
  * SUMMARY INFORMATION
  ******************************/
 
-#environment td {
-	padding: 5px;
-	border: 1px solid #E6E6E6;
+ /* style generation info - move to the right */
+body p:first-of-type a{
+	font-size: 0;
 }
 
-#environment tr:nth-child(odd) {
-	background-color: #f6f6f6;
-}
-
-/******************************
- * TEST RESULT COLORS
- ******************************/
-span.passed, .passed .col-result {
-	color: green;
-}
-span.skipped, span.xfailed, span.rerun, .skipped .col-result, .xfailed .col-result, .rerun .col-result {
-	color: orange;
-}
-span.error, span.failed, span.xpassed, .error .col-result, .failed .col-result, .xpassed .col-result  {
-	color: red;
-}
-
-
-/******************************
- * RESULTS TABLE
- *
- * 1. Table Layout
- * 2. Extra
- * 3. Sorting items
- *
- ******************************/
-
-/*------------------
- * 1. Table Layout
- *------------------*/
-
-#results-table {
-	border: 1px solid #e6e6e6;
-	color: #999;
-	font-size: 12px;
-	width: 100%
-}
-
-#results-table th, #results-table td {
-	padding: 5px;
-	border: 1px solid #E6E6E6;
-	text-align: left
-}
-#results-table th {
-	font-weight: bold
-}
-
-/*------------------
- * 2. Extra
- *------------------*/
-
-.log:only-child {
-	height: inherit
-}
-.log {
-	background-color: #e6e6e6;
-	border: 1px solid #e6e6e6;
+body p:first-of-type {
 	color: black;
-	display: block;
-	font-family: "Courier New", Courier, monospace;
-	height: 230px;
-	overflow-y: scroll;
-	padding: 5px;
-	white-space: pre-wrap
-}
-div.image {
-	border: 1px solid #e6e6e6;
+	text-align: right;
 	float: right;
-	height: 240px;
-	margin-left: 5px;
-	overflow: hidden;
-	width: 320px
+	font-size: 140%;
+	display:block;
+	text-decoration: underline;
 }
-div.image img {
-	width: 320px
+
+body p:first-of-type::before {
+	content: "< ";
 }
-.collapsed {
+body p:first-of-type::after {
+	content: " >";
+}
+
+
+ /* hide file name */
+body h1:first-of-type {
 	display: none;
 }
-.expander::after {
-	content: " (show details)";
-	color: #BBB;
-	font-style: italic;
-	cursor: pointer;
-}
-.collapser::after {
-	content: " (hide details)";
-	color: #BBB;
-	font-style: italic;
-	cursor: pointer;
-}
 
-/*------------------
- * 3. Sorting items
- *------------------*/
-.sortable {
-	cursor: pointer;
-}
-
-.sort-icon {
-	font-size: 0px;
-	float: left;
-	margin-right: 5px;
-	margin-top: 5px;
-	/*triangle*/
-	width: 0;
-	height: 0;
-	border-left: 8px solid transparent;
-	border-right: 8px solid transparent;
-}
-
-.inactive .sort-icon {
-	/*finish triangle*/
-	border-top: 8px solid #E6E6E6;
-}
-
-.asc.active .sort-icon {
-	/*finish triangle*/
-	border-bottom: 8px solid #999;
-}
-
-.desc.active .sort-icon {
-	/*finish triangle*/
-	border-top: 8px solid #999;
-}
-
-/******************************
- * CUSTOM CSS
- * assets\style.css
- ******************************/
-
-body {
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 12px;
-	min-width: 1200px;
-	color: #999;
-}
-
-h1 {
-	font-size: 24px;
-	color: black;
-}
-
-h2 {
-	font-size: 16px;
-	color: black;
-}
-
-p {
-    color: black;
-}
-
-a {
-	color: #999;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-/******************************
- * SUMMARY INFORMATION
- ******************************/
-
+/* hide environment table */
 #environment td {
-	padding: 5px;
-	border: 1px solid #E6E6E6;
-}
-
-#environment tr:nth-child(odd) {
-	background-color: #f6f6f6;
-}
-
-/******************************
- * TEST RESULT COLORS
- ******************************/
-span.passed, .passed .col-result {
-	color: green;
-}
-span.skipped, span.xfailed, span.rerun, .skipped .col-result, .xfailed .col-result, .rerun .col-result {
-	color: orange;
-}
-span.error, span.failed, span.xpassed, .error .col-result, .failed .col-result, .xpassed .col-result  {
-	color: red;
-}
-
-
-/******************************
- * RESULTS TABLE
- *
- * 1. Table Layout
- * 2. Extra
- * 3. Sorting items
- *
- ******************************/
-
-/*------------------
- * 1. Table Layout
- *------------------*/
-
-#results-table {
-	border: 1px solid #e6e6e6;
-	color: #999;
-	font-size: 12px;
-	width: 100%
-}
-
-#results-table th, #results-table td {
-	padding: 5px;
-	border: 1px solid #E6E6E6;
-	text-align: left
-}
-#results-table th {
-	font-weight: bold
-}
-
-/*------------------
- * 2. Extra
- *------------------*/
-
-.log:only-child {
-	height: inherit
-}
-.log {
-	background-color: #e6e6e6;
-	border: 1px solid #e6e6e6;
-	color: black;
-	display: block;
-	font-family: "Courier New", Courier, monospace;
-	height: 230px;
-	overflow-y: scroll;
-	padding: 5px;
-	white-space: pre-wrap
-}
-div.image {
-	border: 1px solid #e6e6e6;
-	float: right;
-	height: 240px;
-	margin-left: 5px;
-	overflow: hidden;
-	width: 320px
-}
-div.image img {
-	width: 320px
-}
-.collapsed {
 	display: none;
 }
-.expander::after {
-	content: " (show details)";
-	color: #BBB;
-	font-style: italic;
-	cursor: pointer;
-}
-.collapser::after {
-	content: " (hide details)";
-	color: #BBB;
-	font-style: italic;
-	cursor: pointer;
+body h2:first-of-type {
+	display: none;
 }
 
-/*------------------
- * 3. Sorting items
- *------------------*/
-.sortable {
-	cursor: pointer;
+/*
+
+/ hide test code in output /
+.failed .extra :not(span) {
+	visibility: hidden;
+
 }
 
-.sort-icon {
+/ move error msg to top/
+.failed .extra .error {
+	position: sticky;
+	visibility : visible;
+	bottom: 600px;
+
+}
+.failed .extra {
+	height: 50px;
+}
+
+*/
+
+/* add PG logo  assets/PGLogo.png 
+body h2:nth-of-type(2):before {
+    content: "";
+    display: block;
+    background: url('assets/PGLogo.png') no-repeat;
+    width: 25px;
+    height: 25px;
+    float: left;
+	width:100px;
+	color:green;
+	
+}
+*/
+
+/* style summary info */
+body h2:nth-of-type(2) {
+		margin-top: 80px;
+		text-align: center;
+		font-size: 240%;
+		color: white;
+		text-shadow:
+		-2px -1px 0 #1a75ff,
+		2px -1px 0 #1a75ff,
+		-2px 1px 0 #1a75ff,
+		2px 1px 0 #1a75ff;
+}
+
+body h2:nth-of-type(2):before {
+		content: "CNGC Test "
+}
+body p:nth-of-type(2) {
+		text-align: center;
+		font-style: bold;
+		font-size: 200%;
+		margin-bottom: 40px;
+		margin-top: 0;
+		width: 40%;
+		position:relative;
+		margin-left: 30%;
+}
+
+/* style filters */
+
+p.filter {
+	font-size: 130%;
+}
+input[type='checkbox'] {
+    /*-webkit-appearance:none; */
+    width:20px;
+    height:20px;
+    background:white;
+    border-radius:5px;
+    border:2px solid #555;
+}
+
+div.log:not(span){
 	font-size: 0px;
-	float: left;
-	margin-right: 5px;
-	margin-top: 5px;
-	/*triangle*/
-	width: 0;
-	height: 0;
-	border-left: 8px solid transparent;
-	border-right: 8px solid transparent;
 }
 
-.inactive .sort-icon {
-	/*finish triangle*/
-	border-top: 8px solid #E6E6E6;
+span.error {
+	font-size: 20px;
+	font-style: normal;
 }
 
-.asc.active .sort-icon {
-	/*finish triangle*/
-	border-bottom: 8px solid #999;
+input[type='checkbox']:nth-of-type(5), input[type='checkbox']:nth-of-type(5), input[type='checkbox']:nth-of-type(6) {
+	display: none;
 }
 
-.desc.active .sort-icon {
-	/*finish triangle*/
-	border-top: 8px solid #999;
+.passed, .skipped, .failed, .error {
+		font-size: 20px;
+}
+
+.xpassed, .xfailed {
+		display: none;
+}
+
+/* style 'Result' word   .error*/
+body h2:nth-of-type(3) {
+	margin-top: 40px;
+	font-size: 180%;
+	margin-bottom: 0px;
+}
+
+
+
+/*---------------------------------------*/
+/* style result table START */
+#results-table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  margin-left: 5%;
+  width: 90%;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+/* first result table row uppercase */
+#results-table-head tr th {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/* align text in result table */
+.col-result {
+	vertical-align: center;
+	width: 15%;
+}
+
+#results-table td, #results-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  padding-left: 10px;
+}
+
+#results-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#results-table tr:hover {background-color: #ddd;}
+
+#results-table th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	background-color: black;
+	color: white;
+	font-size: 120%;
+}
+
+/* collapse empty logs */
+.empty {
+	display:none;
+}
+
+/* right border to last column on the right */
+.col-duration:after {
+	content: " sec"
+}
+
+/* hide 'Links' column */
+.col-links {
+	display: none;
+}
+#results-table-head tr th:nth-child(4) {
+	display: none;
+}
+
+/* narrow 'Result' column */
+#results-table-head tr th:nth-child(1), .col-result {
+	width: 20%;
+}
+
+/* narrow 'Duration' column */
+#results-table-head tr th:nth-child(4), .col-duration {
+	width: 10%;
+}
+.col-duration {
+	text-align: center !important;
+}
+
+/* font color for 'Test' and 'Duration' columns */
+.col-name, .col-duration {
+	 color: black;
+	 font-style: normal;
+	
+}
+/* '(show details)' styling */
+span.expander::after, span.collapser::after {
+	font-size: 70%;
 }
