@@ -95,3 +95,6 @@ input_list = convert_file_to_lists(readFile)
 
 #running pytest directly from python, first argument given in terminal (yaml file) is a test script file name
 pytest.main([str(sys.argv[6]), "-v", "--html=index.html" , "--css=assets\\style.css"])
+
+#running pytest directly from python, first argument given in terminal (yaml file) is a test script file name
+pytest.main([str(sys.argv[6]), "-v", "--junitxml=report.xml"])

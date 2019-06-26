@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="2" name="pytest" skipped="0" tests="4" time="1.217"><testcase classname="test_pytest" file="test_pytest.py" line="24" name="test_success" time="1.102"><system-out>This is a fixture function invoked
+connecting to db 1...
+DB 1 CONNECTION SUCCESS
+</system-out></testcase><testcase classname="test_pytest" file="test_pytest.py" line="27" name="test_success_2" time="0.002"></testcase><testcase classname="test_pytest" file="test_pytest.py" line="30" name="test_fail" time="0.002"><failure message="assert False">def test_fail():
+&gt;   		assert False
+E     assert False
+
+test_pytest.py:32: AssertionError</failure></testcase><testcase classname="test_pytest" file="test_pytest.py" line="33" name="test_fail_2" time="0.004"><failure message="assert -3 &gt; 15">def test_fail_2():
+&gt;   		assert -3 &gt; 15
+E     assert -3 &gt; 15
+
+test_pytest.py:35: AssertionError</failure><system-out>
+closing db connection...
+</system-out></testcase></testsuite>
