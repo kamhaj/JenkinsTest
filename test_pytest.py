@@ -34,4 +34,56 @@ def test_fail():
 def test_fail_2():
 		assert -3 > 15
 		
+def test_success_3(get_fixture):
+		assert True
+
+def test_success_4(get_fixture):
+		assert True
+
+def test_success_5(get_fixture):
+		assert True
+
+def test_success_6(get_fixture):
+		assert True
+
+def test_success_7(get_fixture):
+		assert True
+
+def test_success_8(get_fixture):
+		assert True
+
+def test_success_9(get_fixture):
+		assert True
+
+def test_success_10(get_fixture):
+		assert True
+
+def test_success_11(get_fixture):
+		assert True
+
+def test_success_12(get_fixture):
+		assert True
+
+def test_success_13(get_fixture):
+		assert True
+
+def test_success_14(get_fixture):
+		assert True
+
+def test_success_15(get_fixture):
+		assert True
+
+def test_success_16(get_fixture):
+		assert True
+
+def test_success_17(get_fixture):
+		assert True
+
+def test_success_18(get_fixture):
+		assert True	
 		
+def test_success_19(get_fixture):
+		assert True
+		
+def test_success_20(get_fixture):
+		assert True
